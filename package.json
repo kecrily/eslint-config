@@ -1,0 +1,15 @@
+{
+  "name": "@kecrily/eslint-config-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "author": "Percy Ma",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@kecrily/eslint-config": "*",
+    "eslint": "^8.12.0",
+    "typescript": "^4.6.3"
+  }
+}
