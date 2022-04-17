@@ -14,7 +14,7 @@ module.exports = {
   rules: {
     'import/named': 'off',
 
-    // TS
+    // TypeScript
     '@typescript-eslint/semi': ['error', 'never'],
     '@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }],
     '@typescript-eslint/member-delimiter-style': ['error', { multiline: { delimiter: 'none' } }],
@@ -24,7 +24,7 @@ module.exports = {
     '@typescript-eslint/consistent-indexed-object-style': ['error', 'record'],
     '@typescript-eslint/prefer-ts-expect-error': 'error',
 
-    // Override JS
+    // JavaScript
     'no-useless-constructor': 'off',
     'indent': 'off',
     '@typescript-eslint/indent': ['error', 2],
