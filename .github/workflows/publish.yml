@@ -12,7 +12,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: '16.x'
+          node-version: 16.x
           registry-url: 'https://registry.npmjs.org'
 
       - name: Cache pnpm modules
@@ -22,14 +22,14 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-
-      
+
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 7.0.0-rc.3
+          version: 7.0.0-rc.6
           run_install: true
 
       - name: Publish
-        run: pnpm -r publish --no-git-checks
+        run: pnpm publish --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

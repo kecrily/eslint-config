@@ -1,9 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const basic = require('@kecrily/eslint-config-basic')
-
 module.exports = {
   extends: [
-    '@kecrily/eslint-config-basic',
+    './base.js',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
   ],
@@ -12,7 +10,7 @@ module.exports = {
       node: { extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'] },
     },
   },
-  overrides: basic.overrides,
+  overrides: require('./base').overrides,
   rules: {
     'import/named': 'off',
 

@@ -1,5 +1,5 @@
 module.exports = {
   extends: [
-    '@kecrily/eslint-config-vue',
+    './vue.js',
   ],
 }
