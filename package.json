@@ -1,6 +1,6 @@
 {
   "name": "@kecrily/eslint-config",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A ESLint config for Percy.",
   "keywords": [
     "eslint"
@@ -25,12 +25,13 @@
     "@kecrily/eslint-config": "*",
     "@typescript-eslint/eslint-plugin": "^5.19.0",
     "@typescript-eslint/parser": "^5.19.0",
+    "eslint-config-standard": "17.0.0-1",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-html": "^6.2.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsonc": "^2.2.1",
     "eslint-plugin-markdown": "^2.2.1",
-    "eslint-plugin-n": "^15.1.0",
+    "eslint-plugin-n": "^14.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-unicorn": "^42.0.0",
     "eslint-plugin-vue": "^8.6.0",
