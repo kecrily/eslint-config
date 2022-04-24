@@ -22,7 +22,7 @@
     "typescript": ">=3.9"
   },
   "dependencies": {
-    "@kecrily/eslint-config": "*",
+    "@kecrily/eslint-config": "./",
     "@typescript-eslint/eslint-plugin": "^5.19.0",
     "@typescript-eslint/parser": "^5.19.0",
     "eslint-config-standard": "17.0.0-1",
