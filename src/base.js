@@ -1,9 +1,5 @@
 module.exports = {
-  env: {
-    es6: true,
-    browser: true,
-    node: true,
-  },
+  env: { es6: true, browser: true, node: true },
   extends: [
     'standard',
     'plugin:import/recommended',
@@ -29,14 +25,9 @@ module.exports = {
     '!.vitepress',
     '!.vscode',
   ],
-  plugins: [
-    'html',
-    'unicorn',
-  ],
+  plugins: ['html', 'unicorn'],
   settings: {
-    'import/resolver': {
-      node: { extensions: ['.js', '.mjs'] },
-    },
+    'import/resolver': { node: { extensions: ['.js', '.mjs'] } },
   },
   overrides: [
     {
@@ -51,9 +42,7 @@ module.exports = {
     {
       files: ['*.yaml', '*.yml'],
       parser: 'yaml-eslint-parser',
-      rules: {
-        'spaced-comment': 'off',
-      },
+      rules: { 'spaced-comment': 'off' },
     },
     {
       files: ['package.json'],
@@ -104,27 +93,19 @@ module.exports = {
     },
     {
       files: ['*.d.ts'],
-      rules: {
-        'import/no-duplicates': 'off',
-      },
+      rules: { 'import/no-duplicates': 'off' },
     },
     {
       files: ['*.js'],
-      rules: {
-        '@typescript-eslint/no-var-requires': 'off',
-      },
+      rules: { '@typescript-eslint/no-var-requires': 'off' },
     },
     {
       files: ['scripts/**/*.*', 'cli.*'],
-      rules: {
-        'no-console': 'off',
-      },
+      rules: { 'no-console': 'off' },
     },
     {
       files: ['*.test.ts', '*.test.js', '*.spec.ts', '*.spec.js'],
-      rules: {
-        'no-unused-expressions': 'off',
-      },
+      rules: { 'no-unused-expressions': 'off' },
     },
     {
       // Code blocks in markdown file
