@@ -8,4 +8,4 @@
 
 ## License
 
-**eslint-config** © [Percy Ma](https://git.io/kecrily), Released under [MIT License](LICENSE).
+**eslint-config** © [Percy Ma](https://github.com/kecrily), Released under [MIT License](LICENSE).
