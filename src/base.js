@@ -75,7 +75,10 @@ module.exports = {
           },
           {
             pathPattern: 'scripts',
-            order: ['dev', 'build', 'preview', 'test', 'lint', 'release'],
+            order: [
+              'dev', 'build', 'generate', 'preview',
+              'test', 'typecheck', 'lint', 'release',
+            ],
           },
         ],
       },
