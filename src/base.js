@@ -145,7 +145,6 @@ module.exports = {
     'no-cond-assign': ['error', 'always'],
     'func-call-spacing': ['off', 'never'],
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
-    'indent': ['error', 2, { SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1 }],
     'no-restricted-syntax': [
       'error',
       'DebuggerStatement',
@@ -155,6 +154,8 @@ module.exports = {
     'object-curly-spacing': ['error', 'always'],
     'no-return-await': 'off',
     'space-before-function-paren': ['error', 'never'],
+    'no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0, maxEOF: 1 }],
+    'indent': ['error', 2, { SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1 }],
 
     // es6
     'no-var': 'error',
