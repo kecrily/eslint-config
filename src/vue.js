@@ -24,6 +24,16 @@ module.exports = {
     'vue/require-default-prop': 'off',
     'vue/multi-word-component-names': 'off',
 
+    // space
+    'vue/array-bracket-spacing': ['error', 'never'],
+    'vue/block-spacing': ['error', 'always'],
+    'vue/comma-spacing': ['error', { before: false, after: true }],
+    'vue/func-call-spacing': ['error', 'never'],
+    'vue/key-spacing': ['error', { beforeColon: false, afterColon: true }],
+    'vue/keyword-spacing': ['error', { before: true, after: true }],
+    'vue/object-curly-spacing': ['error', 'always'],
+    'vue/template-curly-spacing': ['error', 'never'],
+
     // reactivity transform
     'vue/no-setup-props-destructure': 'off',
 
