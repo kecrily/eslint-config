@@ -9,18 +9,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7.x
+
       - name: Setup node
         uses: actions/setup-node@v3
         with:
           cache: pnpm
           node-version: 16.x
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: https://registry.npmjs.org
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 7.x
-          run_install: true
+      - name: Install
+        run: pnpm install
 
       - name: Publish
         run: pnpm publish --no-git-checks
