@@ -9,21 +9,12 @@ module.exports = {
     'plugin:markdown/recommended',
   ],
   ignorePatterns: [
-    '*.min.*',
-    'CHANGELOG.md',
-    'dist',
-    'LICENSE*',
-    'output',
-    'coverage',
-    'public',
-    'temp',
-    'packages-lock.json',
-    'pnpm-lock.yaml',
-    'yarn.lock',
-    '__snapshots__',
-    '!.github',
-    '!.vitepress',
-    '!.vscode',
+    '*.min.*', 'dist', 'output',
+    'CHANGELOG.md', 'LICENSE*',
+    'coverage', '__snapshots__',
+    'public', 'temp',
+    'packages-lock.json', 'yarn.lock', 'pnpm-lock.yaml',
+    '!.github', '!.vitepress', '!.vscode',
   ],
   plugins: ['html', 'unicorn'],
   settings: {
@@ -31,7 +22,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.json', '*.json5'],
+      files: ['*.json', '*.jsonc', '*.json5'],
       parser: 'jsonc-eslint-parser',
       rules: {
         'quotes': ['error', 'double'],
