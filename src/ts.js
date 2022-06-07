@@ -1,15 +1,50 @@
 module.exports = {
-  extends: [
-    './base.js',
-    'plugin:import/typescript',
-    'plugin:@typescript-eslint/recommended',
-  ],
+  extends: ['./js'],
   settings: {
     'import/resolver': {
       node: { extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'] },
     },
   },
-  overrides: require('./base').overrides,
+  overrides: [
+    {
+      files: ['*.d.ts'],
+      rules: { 'import/no-duplicates': 'off' },
+    },
+    {
+      files: ['*.ts'],
+      extends: [
+        'plugin:import/typescript',
+        'plugin:@typescript-eslint/recommended',
+      ],
+      rules: {
+        'no-useless-constructor': 'off',
+        'indent': 'off',
+        '@typescript-eslint/indent': ['error', 2],
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+        'no-redeclare': 'off',
+        '@typescript-eslint/no-redeclare': 'error',
+        'no-use-before-define': 'off',
+        '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
+        'brace-style': 'off',
+        '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: true }],
+        'comma-dangle': 'off',
+        '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
+        'object-curly-spacing': 'off',
+        '@typescript-eslint/object-curly-spacing': ['error', 'always'],
+      },
+    },
+    {
+      // Code blocks in markdown file
+      files: ['**/*.md/*.ts'],
+      rules: {
+        '@typescript-eslint/no-redeclare': 'off',
+        '@typescript-eslint/no-unused-vars': 'off',
+        '@typescript-eslint/no-use-before-define': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+  ],
   rules: {
     'import/named': 'off',
 
@@ -22,23 +57,6 @@ module.exports = {
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
     '@typescript-eslint/consistent-indexed-object-style': ['error', 'record'],
     '@typescript-eslint/prefer-ts-expect-error': 'error',
-
-    // JavaScript
-    'no-useless-constructor': 'off',
-    'indent': 'off',
-    '@typescript-eslint/indent': ['error', 2],
-    'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-    'no-redeclare': 'off',
-    '@typescript-eslint/no-redeclare': 'error',
-    'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
-    'brace-style': 'off',
-    '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: true }],
-    'comma-dangle': 'off',
-    '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
-    'object-curly-spacing': 'off',
-    '@typescript-eslint/object-curly-spacing': ['error', 'always'],
 
     // off
     '@typescript-eslint/naming-convention': 'off',
