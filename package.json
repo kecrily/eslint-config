@@ -1,6 +1,7 @@
 {
   "name": "@kecrily/eslint-config",
   "version": "0.1.4",
+  "packageManager": "pnpm@7.1.9",
   "description": "A ESLint config for Percy.",
   "keywords": [
     "eslint"
@@ -39,8 +40,5 @@
     "@kecrily/eslint-config": "link:",
     "eslint": "^8.16.0",
     "typescript": "^4.7.2"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
