@@ -7,16 +7,70 @@ module.exports = {
   overrides: [
     {
       files: ['*.js', '*.ts'],
-      extends: [
-        'plugin:import/recommended',
-      ],
+      extends: ['plugin:import/recommended'],
       rules: {
+        // Common
+        'semi': ['error', 'never'],
+        'curly': ['error', 'multi-or-nest', 'consistent'],
+        'quotes': ['error', 'single'],
+        'quote-props': ['error', 'consistent-as-needed'],
+        'no-unused-vars': 'warn',
+        'no-param-reassign': 'off',
+        'no-debugger': 'error',
+        'no-console': ['error', { allow: ['warn', 'error'] }],
+        'no-cond-assign': ['error', 'always'],
+        'no-restricted-syntax': [
+          'error',
+          'DebuggerStatement',
+          'LabeledStatement',
+          'WithStatement',
+        ],
+        'no-return-await': 'off',
+        'space-before-function-paren': ['error', 'never'],
+        'no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0, maxEOF: 0 }],
+        'indent': ['error', 2, { SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1 }],
+
+        /// style
+        'array-bracket-newline': ['error', { multiline: true }],
+        'array-bracket-spacing': ['error', 'never'],
+        'arrow-spacing': ['error', { before: true, after: true }],
+        'block-spacing': ['error', 'always'],
+        'brace-style': ['error', '1tbs', { allowSingleLine: true }],
+        'camelcase': ['error', { properties: 'always' }],
+        'comma-dangle': ['error', 'always-multiline'],
+        'comma-spacing': ['error', { before: false, after: true }],
+        'comma-style': ['error', 'last'],
+        'dot-location': ['error', 'property'],
+        'dot-notation': ['error', { allowKeywords: true, allowPattern: '^[a-z]+(_[a-z]+)+$' }],
+        'eqeqeq': ['error', 'smart'],
+        'func-call-spacing': ['error', 'never'],
+        'key-spacing': ['error', { beforeColon: false, afterColon: true }],
+        'keyword-spacing': ['error', { before: true, after: true }],
+        'max-len': ['error', { code: 120, tabWidth: 2 }],
+        'no-constant-condition': 'error',
+        'no-empty-pattern': 'error',
+        'no-extra-parens': ['error', 'all'],
+        'no-irregular-whitespace': 'error',
+        'no-loss-of-precision': 'error',
+        'no-useless-concat': 'error',
+        'object-curly-newline': ['error', { consistent: true }],
+        'object-curly-spacing': ['error', 'always'],
+        'object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
+        'object-shorthand': ['error', 'always', { avoidQuotes: true }],
+        'operator-linebreak': ['error', 'before'],
+        'prefer-template': 'error',
+        'space-in-parens': ['error', 'never'],
+        'space-infix-ops': ['error'],
+        'space-unary-ops': ['error', { words: false, nonwords: false }],
+        'template-curly-spacing': ['error', 'never'],
+
         // import
         'import/order': 'error',
         'import/first': 'error',
         'import/no-mutable-exports': 'error',
         'import/no-unresolved': 'off',
         'import/no-absolute-path': 'off',
+
         // es6
         'no-var': 'error',
         'prefer-const': [
@@ -33,38 +87,30 @@ module.exports = {
             allowUnboundThis: true,
           },
         ],
-        'object-shorthand': [
-          'error',
-          'always',
-          {
-            ignoreConstructors: false,
-            avoidQuotes: true,
-          },
-        ],
         'prefer-exponentiation-operator': 'error',
         'prefer-rest-params': 'error',
         'prefer-spread': 'error',
-        'prefer-template': 'error',
         'arrow-parens': ['error', 'as-needed', { requireForBlockBody: true }],
         'generator-star-spacing': 'off',
-        'spaced-comment': ['error', 'always', {
-          line: {
-            markers: ['/'],
-            exceptions: ['/', '#'],
+        'spaced-comment': [
+          'error', 'always', {
+            line: {
+              markers: ['/'],
+              exceptions: ['/', '#'],
+            },
+            block: {
+              markers: ['!'],
+              exceptions: ['*'],
+              balanced: true,
+            },
           },
-          block: {
-            markers: ['!'],
-            exceptions: ['*'],
-            balanced: true,
-          },
-        }],
+        ],
 
         // best-practice
         'array-callback-return': 'error',
         'block-scoped-var': 'error',
         'consistent-return': 'off',
         'complexity': ['off', 11],
-        'eqeqeq': ['error', 'smart'],
         'no-alert': 'warn',
         'no-case-declarations': 'error',
         'no-multi-spaces': 'error',
@@ -75,7 +121,6 @@ module.exports = {
         'vars-on-top': 'error',
         'require-await': 'off',
         'no-return-assign': 'off',
-        'operator-linebreak': ['error', 'before'],
 
         // unicorns
         // Pass error message when throwing errors
