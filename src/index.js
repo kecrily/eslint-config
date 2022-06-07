@@ -3,4 +3,5 @@ module.exports = {
     './base',
     './vue',
   ],
+  reportUnusedDisableDirectives: true,
 }
