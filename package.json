@@ -1,10 +1,11 @@
 {
   "name": "@kecrily/eslint-config",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "packageManager": "pnpm@7.1.9",
   "description": "A ESLint config for Percy.",
   "keywords": [
-    "eslint"
+    "eslint",
+    "eslint-config"
   ],
   "license": "MIT",
   "author": "Percy Ma",
