@@ -39,7 +39,6 @@ module.exports = {
         'vue/func-call-spacing': ['error', 'never'],
         'vue/key-spacing': ['error', { beforeColon: false, afterColon: true }],
         'vue/keyword-spacing': ['error', { before: true, after: true }],
-        'vue/max-len': ['error', { code: 120, tabWidth: 2 }],
         'vue/no-constant-condition': 'error',
         'vue/no-empty-pattern': 'error',
         'vue/no-extra-parens': ['error', 'all'],
