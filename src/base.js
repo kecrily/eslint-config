@@ -48,43 +48,41 @@ module.exports = {
       files: ['package.json'],
       parser: 'jsonc-eslint-parser',
       rules: {
-        'jsonc/sort-keys': [
-          'error',
-          {
-            pathPattern: '^$',
-            order: [
-              'name', 'type', 'version', 'private', 'packageManager',
-              'description', 'categories', 'keywords', 'license',
-              'author', 'contributors', 'repository',
-              'homepage', 'bugs', 'funding',
-              'engines',
-              'main', 'module', 'browser', 'bin',
-              'types', 'typesVersions', 'unpkg', 'jsdelivr',
-              'exports', 'files',
-              'sideEffects', 'scripts',
-              'peerDependencies', 'peerDependenciesMeta',
-              'optionalDependencies', 'dependencies',
-              'devDependencies', 'bundledDependencies',
-              'pnpm', 'overrides', 'resolutions',
-              'husky', 'lint-staged', 'simple-git-hooks',
-              'config', 'eslintConfig', 'publishConfig', 'workspaces',
-            ],
-          },
-          {
-            pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies$',
-            order: { type: 'asc' },
-          },
-          {
-            pathPattern: '^exports.*$',
-            order: ['types', 'require', 'import'],
-          },
-          {
-            pathPattern: 'scripts',
-            order: [
-              'dev', 'build', 'generate', 'preview',
-              'test', 'typecheck', 'lint', 'release',
-            ],
-          },
+        'jsonc/sort-keys': ['error', {
+          pathPattern: '^$',
+          order: [
+            'name', 'type', 'version', 'private', 'packageManager',
+            'description', 'categories', 'keywords', 'license',
+            'author', 'contributors', 'repository',
+            'homepage', 'bugs', 'funding',
+            'engines',
+            'main', 'module', 'browser', 'bin',
+            'types', 'typesVersions', 'unpkg', 'jsdelivr',
+            'exports', 'files',
+            'sideEffects', 'scripts',
+            'peerDependencies', 'peerDependenciesMeta',
+            'optionalDependencies', 'dependencies',
+            'devDependencies', 'bundledDependencies',
+            'pnpm', 'overrides', 'resolutions',
+            'husky', 'lint-staged', 'simple-git-hooks',
+            'config', 'eslintConfig', 'publishConfig', 'workspaces',
+          ],
+        },
+        {
+          pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies$',
+          order: { type: 'asc' },
+        },
+        {
+          pathPattern: '^exports.*$',
+          order: ['types', 'require', 'import'],
+        },
+        {
+          pathPattern: 'scripts',
+          order: [
+            'dev', 'build', 'generate', 'preview',
+            'test', 'typecheck', 'lint', 'release',
+          ],
+        },
         ],
       },
     },
@@ -117,7 +115,6 @@ module.exports = {
     'indent': ['error', 2, { SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1 }],
 
     // style
-    'array-bracket-newline': ['error', { multiline: true }],
     'array-bracket-spacing': ['error', 'never'],
     'arrow-spacing': ['error', { before: true, after: true }],
     'block-spacing': ['error', 'always'],

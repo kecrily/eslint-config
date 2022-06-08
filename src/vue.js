@@ -24,7 +24,6 @@ module.exports = {
 
         // style
         'vue/component-tags-order': ['error', { order: ['script', 'template', 'style'] }],
-        'vue/array-bracket-newline': ['error', { multiline: true }],
         'vue/array-bracket-spacing': ['error', 'never'],
         'vue/arrow-spacing': ['error', { before: true, after: true }],
         'vue/block-spacing': ['error', 'always'],

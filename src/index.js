@@ -1,7 +1,4 @@
 module.exports = {
-  extends: [
-    './base',
-    './vue',
-  ],
+  extends: ['./base', './vue'],
   reportUnusedDisableDirectives: true,
 }
