@@ -23,11 +23,7 @@ module.exports = {
       },
     },
     {
-      files: ['*.json'],
-      extends: ['plugin:jsonc/recommended-with-json'],
-    },
-    {
-      files: ['*.jsonc'],
+      files: ['*.jsonc', '*.jsonc'],
       extends: ['plugin:jsonc/recommended-with-jsonc'],
     },
     {
