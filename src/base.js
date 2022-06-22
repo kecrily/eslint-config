@@ -32,7 +32,6 @@ module.exports = {
     },
     {
       files: ['*.yaml', '*.yml'],
-      parser: 'yaml-eslint-parser',
       extends: ['plugin:yml/recommended'],
       rules: {
         'spaced-comment': 'off',
