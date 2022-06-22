@@ -1,4 +1,6 @@
 module.exports = {
+  env: { es6: true, browser: true, node: true },
+  parserOptions: { ecmaVersion: 'lastest', sourceType: 'module' },
   extends: [
     'standard',
     'plugin:eslint-comments/recommended',
