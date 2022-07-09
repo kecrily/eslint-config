@@ -5,12 +5,12 @@ module.exports = {
   ],
   plugins: ['markdown'],
   ignorePatterns: [
-    '*.min.*', 'dist', 'output',
+    '*.min.*', '*.d.ts',
+    'dist', 'output',
     'CHANGELOG.md', 'LICENSE*',
     'coverage', '__snapshots__',
     'public', 'temp',
     'packages-lock.json', 'yarn.lock', 'pnpm-lock.yaml',
-    '!.github', '!.vitepress', '!.vscode',
   ],
   overrides: [
     {
