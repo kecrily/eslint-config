@@ -1,6 +1,6 @@
 module.exports = {
   env: { es6: true, browser: true, node: true },
-  parserOptions: { ecmaVersion: 'lastest', sourceType: 'module' },
+  parserOptions: { sourceType: 'module' },
   plugins: ['unicorn', 'promise'],
   settings: {
     'import/resolver': { node: { extensions: ['.js', '.mjs'] } },
