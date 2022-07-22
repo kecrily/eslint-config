@@ -1,4 +1,7 @@
-module.exports = {
+// @ts-check
+const { defineConfig } = require('eslint-define-config')
+
+module.exports = defineConfig({
   env: { es6: true, browser: true, node: true },
   parserOptions: { sourceType: 'module' },
   plugins: ['unicorn', 'promise'],
@@ -168,4 +171,4 @@ module.exports = {
       },
     },
   ],
-}
+})

@@ -1,4 +1,7 @@
-module.exports = {
+// @ts-check
+const { defineConfig } = require('eslint-define-config')
+
+module.exports = defineConfig({
   extends: ['./js'],
   settings: {
     'import/resolver': {
@@ -95,5 +98,4 @@ module.exports = {
       },
     },
   ],
-
-}
+})

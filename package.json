@@ -38,6 +38,7 @@
   "devDependencies": {
     "@kecrily/eslint-config": "link:",
     "eslint": "^8.20.0",
+    "eslint-define-config": "^1.5.1",
     "typescript": "^4.7.4"
   },
   "eslintConfig": {
