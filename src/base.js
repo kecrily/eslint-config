@@ -8,6 +8,7 @@ module.exports = defineConfig({
   ],
   plugins: ['markdown'],
   ignorePatterns: [
+    '!.*',
     '*.min.*', '*.d.ts',
     'dist', 'output',
     'CHANGELOG.md', 'LICENSE*',
