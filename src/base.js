@@ -78,8 +78,16 @@ module.exports = defineConfig({
         {
           pathPattern: 'scripts',
           order: [
-            'dev', 'build', 'generate', 'preview',
-            'test', 'typecheck', 'lint', 'release',
+            { keyPattern: 'pre*' },
+            { keyPattern: 'dev*' },
+            { keyPattern: 'build*' },
+            { keyPattern: 'generate*' },
+            { keyPattern: 'preview*' },
+            { keyPattern: 'test*' },
+            { keyPattern: 'typecheck*' },
+            { keyPattern: 'lint*' },
+            { keyPattern: 'release*' },
+            { keyPattern: 'post*' },
           ],
         },
         ],
