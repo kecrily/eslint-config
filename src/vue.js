@@ -39,6 +39,7 @@ module.exports = defineConfig({
         'vue/dot-notation': ['error', { allowKeywords: true, allowPattern: '^[a-z]+(_[a-z]+)+$' }],
         'vue/eqeqeq': ['error', 'smart'],
         'vue/func-call-spacing': ['error', 'never'],
+        'vue/html-comment-content-spacing': ['error', 'always'],
         'vue/key-spacing': ['error', { beforeColon: false, afterColon: true }],
         'vue/keyword-spacing': ['error', { before: true, after: true }],
         'vue/no-constant-condition': 'error',
