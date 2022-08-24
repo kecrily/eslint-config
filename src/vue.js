@@ -53,6 +53,7 @@ module.exports = defineConfig({
         'vue/object-shorthand': ['error', 'always', { avoidQuotes: true }],
         'vue/operator-linebreak': ['error', 'before'],
         'vue/prefer-template': 'error',
+        'vue/prefer-true-attribute-shorthand': ['error', 'always'],
         'vue/space-in-parens': ['error', 'never'],
         'vue/space-infix-ops': ['error'],
         'vue/space-unary-ops': ['error', { words: false, nonwords: false }],
