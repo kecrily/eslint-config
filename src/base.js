@@ -6,7 +6,6 @@ module.exports = defineConfig({
     'standard',
     'plugin:eslint-comments/recommended',
   ],
-  plugins: ['markdown'],
   ignorePatterns: [
     '!./.*',
     '*.min.*', '*.d.ts',
