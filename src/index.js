@@ -2,6 +2,6 @@
 const { defineConfig } = require('eslint-define-config')
 
 module.exports = defineConfig({
-  extends: ['./base', './vue'],
+  extends: ['./base', './vue', './astro'],
   reportUnusedDisableDirectives: true,
 })
