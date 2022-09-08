@@ -1,7 +1,5 @@
-// @ts-check
-const { defineConfig } = require('eslint-define-config')
-
-module.exports = defineConfig({
+module.exports = {
+  /** @type { import('eslint').Linter.Config } */
   env: { es6: true, browser: true, node: true },
   parserOptions: { sourceType: 'module' },
   plugins: ['unicorn', 'promise'],
@@ -171,4 +169,4 @@ module.exports = defineConfig({
       },
     },
   ],
-})
+}
