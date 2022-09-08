@@ -1,6 +1,6 @@
 {
   "name": "@kecrily/eslint-config",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "packageManager": "pnpm@7.11.0",
   "description": "A ESLint config for Percy.",
   "keywords": [
