@@ -37,7 +37,7 @@ module.exports = {
       rules: { 'import/no-duplicates': 'off' },
     },
     {
-      files: ['*.ts', '*.vue'],
+      files: ['*.ts', '*.vue', '*.astro'],
       extends: [
         'plugin:import/typescript',
         'plugin:@typescript-eslint/recommended',
@@ -46,6 +46,7 @@ module.exports = {
         'import/named': 'off',
 
         // override
+        'no-undef': 'off',
         'no-useless-constructor': 'off',
         'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],

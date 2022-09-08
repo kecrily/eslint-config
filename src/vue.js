@@ -11,7 +11,6 @@ module.exports = {
       extends: ['plugin:vue/vue3-recommended'],
       rules: {
         'no-unused-vars': 'off',
-        'no-undef': 'off',
         '@typescript-eslint/no-unused-vars': 'off',
 
         'vue/max-attributes-per-line': 'off',
