@@ -19,12 +19,15 @@
   "peerDependencies": {
     "eslint": "^8.22.0",
     "typescript": "^4.7.4"
-  },
-  "dependencies": {
+    },
+  "devDependencies": {
+    "@kecrily/eslint-config": "*",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
+    "eslint": "^8.23.0",
     "eslint-config-standard": "17.0.0",
     "eslint-define-config": "^1.7.0",
+    "eslint-plugin-astro": "^0.18.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsonc": "^2.4.0",
@@ -34,12 +37,7 @@
     "eslint-plugin-unicorn": "^43.0.2",
     "eslint-plugin-vue": "^9.4.0",
     "eslint-plugin-yml": "^1.2.0",
-    "jsonc-eslint-parser": "^2.1.0"
-  },
-  "devDependencies": {
-    "@kecrily/eslint-config": "link:",
-    "eslint": "^8.23.0",
-    "eslint-plugin-astro": "^0.18.0",
+    "jsonc-eslint-parser": "^2.1.0",
     "typescript": "^4.8.2"
   },
   "eslintConfig": {
