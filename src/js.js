@@ -6,6 +6,7 @@ module.exports = {
   settings: {
     'import/resolver': { node: { extensions: ['.js', '.mjs'] } },
   },
+  extends: ['standard'],
   rules: {
     // common
     'semi': ['error', 'never'],

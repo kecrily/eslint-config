@@ -1,28 +1,6 @@
 module.exports = {
   /** @type { import('eslint').Linter.Config } */
-  extends: [
-    'standard',
-    'plugin:eslint-comments/recommended',
-  ],
-  ignorePatterns: [
-    '!./.*',
-    '*.min.*', '*.d.ts',
-    'dist', 'output',
-    'CHANGELOG.md', 'LICENSE*',
-    'coverage', '__snapshots__',
-    'public', 'temp',
-    'packages-lock.json', 'yarn.lock', 'pnpm-lock.yaml',
-  ],
   overrides: [
-    {
-      files: ['*.yaml', '*.yml'],
-      extends: ['plugin:yml/recommended'],
-      rules: {
-        'spaced-comment': 'off',
-        'yml/quotes': ['error', { prefer: 'single', avoidEscape: false }],
-        'yml/no-empty-document': 'off',
-      },
-    },
     {
       files: ['*.json', '*.jsonc', '*.json5'],
       parser: 'jsonc-eslint-parser',
@@ -89,11 +67,6 @@ module.exports = {
         },
         ],
       },
-    },
-    {
-      files: ['**/*.md'],
-      processor: 'markdown/markdown',
-      extends: ['plugin:markdown/recommended'],
     },
   ],
 }
