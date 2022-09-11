@@ -11,6 +11,10 @@ module.exports = {
       extends: [
         'plugin:astro/recommended',
       ],
+      rules: {
+        'semi': 'off',
+        'astro/semi': ['error', 'never'],
+      },
     },
   ],
 }
