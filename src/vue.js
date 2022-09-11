@@ -18,6 +18,7 @@ module.exports = {
         'vue/require-prop-types': 'off',
         'vue/require-default-prop': 'off',
         'vue/multi-word-component-names': 'off',
+        'vue/singleline-html-element-content-newline': 'off',
 
         // reactivity transform
         'vue/no-setup-props-destructure': 'off',
