@@ -53,7 +53,7 @@ module.exports = {
         {
           pathPattern: '^scripts.*$',
           order: [
-            { keyPattern: '^pre.*$' },
+            { keyPattern: '^pre:.*$' },
             { keyPattern: '^dev.*$' },
             { keyPattern: '^build.*$' },
             { keyPattern: '^generate.*$' },
@@ -62,7 +62,7 @@ module.exports = {
             { keyPattern: '^typecheck.*$' },
             { keyPattern: '^lint.*$' },
             { keyPattern: '^release.*$' },
-            { keyPattern: '^post.*$' },
+            { keyPattern: '^post:.*$' },
           ],
         },
         ],
