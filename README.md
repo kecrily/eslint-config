@@ -2,6 +2,25 @@
 
 > A ESLint config for Percy.
 
+## Use
+
+Install eslint, config and typescript:
+
+```sh
+pnpm i eslint @kecrily/eslint-config typescript -D
+```
+
+Add `eslintConfig` to `package.json`:
+
+```json
+{
+  // ...
+  "eslintConfig": {
+    "extends": "@kecrily"
+  }
+}
+```
+
 ## Credit
 
 - [@antfu/eslint-config](https://github.com/antfu/eslint-config)
