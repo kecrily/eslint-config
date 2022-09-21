@@ -25,11 +25,11 @@ module.exports = {
         'jsonc/sort-keys': ['error', {
           pathPattern: '^$',
           order: [
-            'name', 'type', 'version', 'private', 'packageManager',
+            'name', 'type', 'version', 'private',
             'description', 'categories', 'keywords', 'license',
             'author', 'contributors', 'repository',
             'homepage', 'bugs', 'funding',
-            'engines',
+            'engines', 'packageManager',
             'main', 'module', 'browser', 'bin',
             'types', 'typesVersions', 'unpkg', 'jsdelivr',
             'exports', 'files',
