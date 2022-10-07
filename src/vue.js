@@ -1,6 +1,5 @@
 module.exports = {
   /** @type { import('eslint').Linter.Config } */
-  extends: ['./ts'],
   overrides: [
     {
       files: ['*.vue'],
@@ -8,7 +7,7 @@ module.exports = {
       parserOptions: {
         parser: '@typescript-eslint/parser',
       },
-      extends: ['plugin:vue/vue3-recommended'],
+      extends: ['plugin:vue/vue3-recommended', './ts'],
       rules: {
         'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': 'off',

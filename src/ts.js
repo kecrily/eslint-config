@@ -1,6 +1,5 @@
 module.exports = {
   /** @type { import('eslint').Linter.Config } */
-  extends: ['./js'],
   settings: {
     'import/resolver': {
       node: { extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'] },
@@ -8,10 +7,11 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.ts', '*.vue', '*.astro'],
+      files: ['*.ts'],
       extends: [
         'plugin:import/typescript',
         'plugin:@typescript-eslint/recommended',
+        './js',
       ],
       rules: {
         // off
