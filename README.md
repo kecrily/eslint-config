@@ -21,6 +21,11 @@ Add `eslintConfig` to `package.json`:
 }
 ```
 
+## Check Also
+
+- [kecrily/create](https://github.com/kecrily/create)
+- [kecrily/dotfiles](https://github.com/kecrily/dotfiles)
+
 ## Credit
 
 - [@antfu/eslint-config](https://github.com/antfu/eslint-config)
