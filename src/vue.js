@@ -9,6 +9,7 @@ module.exports = {
       },
       extends: ['plugin:vue/vue3-recommended', './ts'],
       rules: {
+        'no-undef': 'off',
         'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': 'off',
 
