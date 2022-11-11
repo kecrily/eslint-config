@@ -1,6 +1,6 @@
 {
   "name": "@kecrily/eslint-config",
-  "version": "0.1.20",
+  "version": "0.2.0",
   "description": "A ESLint config for Percy.",
   "keywords": [
     "eslint",
