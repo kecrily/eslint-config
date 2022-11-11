@@ -17,7 +17,6 @@ module.exports = {
         // off
         'import/named': 'off',
 
-        '@typescript-eslint/naming-convention': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/explicit-member-accessibility': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
@@ -79,6 +78,17 @@ module.exports = {
           ],
           offsetTernaryExpressions: true,
         }],
+        'camelcase': 'off',
+        '@typescript-eslint/naming-convention': ['error',
+          { selector: 'default', format: ['camelCase'] },
+          { selector: 'variable', format: ['camelCase', 'UPPER_CASE'] },
+          { selector: 'parameter', format: ['camelCase'], leadingUnderscore: 'allow' },
+          { selector: 'typeLike', format: ['PascalCase'] },
+          { selector: 'memberLike', modifiers: ['private'], format: ['camelCase'], leadingUnderscore: 'forbid' },
+          { selector: 'variable', modifiers: ['destructured'], format: null },
+          { selector: 'interface', format: ['PascalCase'], custom: { regex: '^I[A-Z]', match: false } },
+          { selector: 'objectLiteralProperty', format: null },
+        ],
       },
     },
     {
