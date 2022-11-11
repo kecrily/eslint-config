@@ -8,6 +8,9 @@ module.exports = {
         'quotes': ['error', 'double'],
         'quote-props': ['error', 'always'],
         'comma-dangle': ['error', 'never'],
+
+        'no-irregular-whitespace': 'off',
+        'jsonc/no-irregular-whitespace': ['error'],
       },
     },
     {
