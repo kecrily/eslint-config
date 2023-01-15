@@ -4,7 +4,7 @@ module.exports = {
   parserOptions: { sourceType: 'module' },
   plugins: ['unicorn', 'promise'],
   settings: {
-    'import/resolver': { node: { extensions: ['.js', '.mjs'] } },
+    'import/resolver': { node: { extensions: ['.js', '.mjs'] } }
   },
   extends: ['standard'],
   rules: {
@@ -22,7 +22,7 @@ module.exports = {
       'error',
       'DebuggerStatement',
       'LabeledStatement',
-      'WithStatement',
+      'WithStatement'
     ],
     'no-return-await': 'off',
     'space-before-function-paren': ['error', 'never'],
@@ -35,7 +35,7 @@ module.exports = {
     'block-spacing': ['error', 'always'],
     'brace-style': ['error', '1tbs', { allowSingleLine: true }],
     'camelcase': ['error', { properties: 'always' }],
-    'comma-dangle': ['error', 'always-multiline'],
+    'comma-dangle': ['error', 'never'],
     'comma-spacing': ['error', { before: false, after: true }],
     'comma-style': ['error', 'last'],
     'dot-location': ['error', 'property'],
@@ -72,11 +72,11 @@ module.exports = {
     'no-var': 'error',
     'prefer-const': ['error', {
       destructuring: 'any',
-      ignoreReadBeforeAssign: true,
+      ignoreReadBeforeAssign: true
     }],
     'prefer-arrow-callback': ['error', {
       allowNamedFunctions: false,
-      allowUnboundThis: true,
+      allowUnboundThis: true
     }],
     'prefer-exponentiation-operator': 'error',
     'prefer-rest-params': 'error',
@@ -86,13 +86,13 @@ module.exports = {
     'spaced-comment': ['error', 'always', {
       line: {
         markers: ['/'],
-        exceptions: ['/', '#'],
+        exceptions: ['/', '#']
       },
       block: {
         markers: ['!'],
         exceptions: ['*'],
-        balanced: true,
-      },
+        balanced: true
+      }
     }],
 
     // best-practice
@@ -114,9 +114,9 @@ module.exports = {
       groups: [
         ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
         ['&&', '||', '?:'],
-        ['in', 'instanceof'],
+        ['in', 'instanceof']
       ],
-      allowSamePrecedence: true,
+      allowSamePrecedence: true
     }],
 
     // unicorns
@@ -153,17 +153,17 @@ module.exports = {
       ignoreDeclarationSort: true,
       ignoreMemberSort: false,
       memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-      allowSeparatedGroups: false,
-    }],
+      allowSeparatedGroups: false
+    }]
   },
   overrides: [
     {
       files: ['scripts/**/*.*', 'cli.*'],
-      rules: { 'no-console': 'off' },
+      rules: { 'no-console': 'off' }
     },
     {
       files: ['*.test.ts', '*.test.js', '*.spec.ts', '*.spec.js'],
-      rules: { 'no-unused-expressions': 'off' },
+      rules: { 'no-unused-expressions': 'off' }
     },
     {
       files: ['**/*.md/*.js', '**/*.md/*.ts'],
@@ -174,8 +174,8 @@ module.exports = {
         'no-restricted-imports': 'off',
         'no-undef': 'off',
         'no-unused-expressions': 'off',
-        'no-unused-vars': 'off',
-      },
-    },
-  ],
+        'no-unused-vars': 'off'
+      }
+    }
+  ]
 }

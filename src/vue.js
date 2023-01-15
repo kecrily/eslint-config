@@ -5,7 +5,7 @@ module.exports = {
       files: ['*.vue'],
       parser: 'vue-eslint-parser',
       parserOptions: {
-        parser: '@typescript-eslint/parser',
+        parser: '@typescript-eslint/parser'
       },
       extends: ['plugin:vue/vue3-recommended', './ts'],
       rules: {
@@ -56,8 +56,8 @@ module.exports = {
         'vue/space-in-parens': ['error', 'never'],
         'vue/space-infix-ops': ['error'],
         'vue/space-unary-ops': ['error', { words: false, nonwords: false }],
-        'vue/template-curly-spacing': ['error', 'never'],
-      },
-    },
-  ],
+        'vue/template-curly-spacing': ['error', 'never']
+      }
+    }
+  ]
 }

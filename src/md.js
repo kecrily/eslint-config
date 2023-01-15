@@ -4,7 +4,7 @@ module.exports = {
     {
       files: ['**/*.md'],
       processor: 'markdown/markdown',
-      extends: ['plugin:markdown/recommended'],
-    },
-  ],
+      extends: ['plugin:markdown/recommended']
+    }
+  ]
 }

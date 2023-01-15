@@ -2,8 +2,8 @@ module.exports = {
   /** @type { import('eslint').Linter.Config } */
   settings: {
     'import/resolver': {
-      node: { extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'] },
-    },
+      node: { extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'] }
+    }
   },
   overrides: [
     {
@@ -11,7 +11,7 @@ module.exports = {
       extends: [
         'plugin:import/typescript',
         'plugin:@typescript-eslint/recommended',
-        './js',
+        './js'
       ],
       rules: {
         // off
@@ -74,9 +74,9 @@ module.exports = {
             'JSXMemberExpression', 'JSXExpressionContainer', 'JSXEmptyExpression',
             'JSXAttribute', 'JSXSpreadAttribute', 'JSXSpreadChild',
             'JSXOpeningElement', 'JSXClosingElement',
-            'JSXFragment', 'JSXOpeningFragment', 'JSXClosingFragment',
+            'JSXFragment', 'JSXOpeningFragment', 'JSXClosingFragment'
           ],
-          offsetTernaryExpressions: true,
+          offsetTernaryExpressions: true
         }],
         'camelcase': 'off',
         '@typescript-eslint/naming-convention': ['error',
@@ -87,13 +87,13 @@ module.exports = {
           { selector: 'memberLike', modifiers: ['private'], format: ['camelCase'], leadingUnderscore: 'forbid' },
           { selector: 'variable', modifiers: ['destructured'], format: null },
           { selector: 'interface', format: ['PascalCase'], custom: { regex: '^I[A-Z]', match: false } },
-          { selector: 'objectLiteralProperty', format: null },
-        ],
-      },
+          { selector: 'objectLiteralProperty', format: null }
+        ]
+      }
     },
     {
       files: ['*.d.ts'],
-      rules: { 'import/no-duplicates': 'off' },
+      rules: { 'import/no-duplicates': 'off' }
     },
     {
     // code block
@@ -102,8 +102,8 @@ module.exports = {
         '@typescript-eslint/no-redeclare': 'off',
         '@typescript-eslint/no-unused-vars': 'off',
         '@typescript-eslint/no-use-before-define': 'off',
-        '@typescript-eslint/no-var-requires': 'off',
-      },
-    },
-  ],
+        '@typescript-eslint/no-var-requires': 'off'
+      }
+    }
+  ]
 }

@@ -8,7 +8,7 @@ module.exports = {
     './ts',
     './vue',
     './yaml',
-    'plugin:eslint-comments/recommended',
+    'plugin:eslint-comments/recommended'
   ],
   reportUnusedDisableDirectives: true,
   ignorePatterns: [
@@ -18,6 +18,6 @@ module.exports = {
     'CHANGELOG.md', 'LICENSE*',
     'coverage', '__snapshots__',
     'public', 'temp',
-    'packages-lock.json', 'yarn.lock', 'pnpm-lock.yaml',
-  ],
+    'packages-lock.json', 'yarn.lock', 'pnpm-lock.yaml'
+  ]
 }

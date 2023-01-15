@@ -7,8 +7,8 @@ module.exports = {
       rules: {
         'spaced-comment': 'off',
         'yml/quotes': ['error', { prefer: 'single', avoidEscape: false }],
-        'yml/no-empty-document': 'off',
-      },
-    },
-  ],
+        'yml/no-empty-document': 'off'
+      }
+    }
+  ]
 }

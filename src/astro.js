@@ -6,16 +6,16 @@ module.exports = {
       parser: 'astro-eslint-parser',
       parserOptions: {
         parser: '@typescript-eslint/parser',
-        extraFileExtensions: ['.astro'],
+        extraFileExtensions: ['.astro']
       },
       extends: [
-        'plugin:astro/recommended',
+        'plugin:astro/recommended'
       ],
       rules: {
         'no-undef': 'off',
         'semi': 'off',
-        'astro/semi': ['error', 'never'],
-      },
-    },
-  ],
+        'astro/semi': ['error', 'never']
+      }
+    }
+  ]
 }

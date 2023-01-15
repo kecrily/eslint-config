@@ -10,16 +10,16 @@ module.exports = {
         'comma-dangle': ['error', 'never'],
 
         'no-irregular-whitespace': 'off',
-        'jsonc/no-irregular-whitespace': ['error'],
-      },
+        'jsonc/no-irregular-whitespace': ['error']
+      }
     },
     {
       files: ['*.jsonc', '*.jsonc'],
-      extends: ['plugin:jsonc/recommended-with-jsonc'],
+      extends: ['plugin:jsonc/recommended-with-jsonc']
     },
     {
       files: ['*.json5'],
-      extends: ['plugin:jsonc/recommended-with-json5'],
+      extends: ['plugin:jsonc/recommended-with-json5']
     },
     {
       files: ['package.json'],
@@ -42,16 +42,16 @@ module.exports = {
             'devDependencies', 'bundledDependencies',
             'pnpm', 'overrides', 'resolutions',
             'husky', 'lint-staged', 'simple-git-hooks',
-            'config', 'eslintConfig', 'publishConfig', 'workspaces',
-          ],
+            'config', 'eslintConfig', 'publishConfig', 'workspaces'
+          ]
         },
         {
           pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies$',
-          order: { type: 'asc' },
+          order: { type: 'asc' }
         },
         {
           pathPattern: '^exports.*$',
-          order: ['types', 'require', 'import'],
+          order: ['types', 'require', 'import']
         },
         {
           pathPattern: '^scripts.*$',
@@ -65,11 +65,11 @@ module.exports = {
             { keyPattern: '^typecheck.*$' },
             { keyPattern: '^lint.*$' },
             { keyPattern: '^release.*$' },
-            { keyPattern: '^post:.*$' },
-          ],
-        },
-        ],
-      },
-    },
-  ],
+            { keyPattern: '^post:.*$' }
+          ]
+        }
+        ]
+      }
+    }
+  ]
 }
