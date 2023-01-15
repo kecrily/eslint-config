@@ -110,6 +110,14 @@ module.exports = {
     'vars-on-top': 'error',
     'require-await': 'off',
     'no-return-assign': 'off',
+    'no-mixed-operators': ['error', {
+      groups: [
+        ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
+        ['&&', '||', '?:'],
+        ['in', 'instanceof'],
+      ],
+      allowSamePrecedence: true,
+    }],
 
     // unicorns
     // Pass error message when throwing errors
