@@ -144,7 +144,6 @@ module.exports = {
     'unicorn/throw-new-error': 'error',
 
     'no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
-    'eslint-comments/disable-enable-pair': 'off',
     'import/no-named-as-default-member': 'off',
     'n/no-callback-literal': 'off',
 
