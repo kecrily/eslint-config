@@ -50,7 +50,7 @@ module.exports = {
         'vue/object-curly-spacing': ['error', 'always'],
         'vue/object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
         'vue/object-shorthand': ['error', 'always', { avoidQuotes: true }],
-        'vue/operator-linebreak': ['error', 'after', { overrides: { '?': 'before', ':': 'before' } }],
+        'vue/operator-linebreak': ['error', 'after'],
         'vue/prefer-template': 'error',
         'vue/prefer-true-attribute-shorthand': ['error', 'always'],
         'vue/space-in-parens': ['error', 'never'],

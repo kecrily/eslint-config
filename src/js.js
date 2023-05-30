@@ -54,7 +54,7 @@ module.exports = {
     'object-curly-spacing': ['error', 'always'],
     'object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
     'object-shorthand': ['error', 'always', { avoidQuotes: true }],
-    'operator-linebreak': ['error', 'before', { overrides: { '{': 'before', '}': 'before' } }],
+    'operator-linebreak': ['error', 'before'],
     'prefer-template': 'error',
     'space-in-parens': ['error', 'never'],
     'space-infix-ops': ['error'],
