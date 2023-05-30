@@ -88,7 +88,9 @@ module.exports = {
           { selector: 'variable', modifiers: ['destructured'], format: null },
           { selector: 'interface', format: ['PascalCase'], custom: { regex: '^I[A-Z]', match: false } },
           { selector: 'objectLiteralProperty', format: null }
-        ]
+        ],
+        'quotes': 'off',
+        '@typescript-eslint/quotes': ['error', 'single', { avoidEscape: true }]
       }
     },
     {
