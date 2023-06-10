@@ -48,8 +48,6 @@ module.exports = {
         '@typescript-eslint/no-redeclare': 'error',
         'no-use-before-define': 'off',
         '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
-        'brace-style': 'off',
-        '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: true }],
         'comma-dangle': 'off',
         '@typescript-eslint/comma-dangle': ['error', 'never'],
         'object-curly-spacing': 'off',
@@ -90,7 +88,9 @@ module.exports = {
           { selector: 'objectLiteralProperty', format: null }
         ],
         'quotes': 'off',
-        '@typescript-eslint/quotes': ['error', 'single', { avoidEscape: true }]
+        '@typescript-eslint/quotes': ['error', 'single', { avoidEscape: true }],
+        'no-extra-parens': 'off',
+        '@typescript-eslint/no-extra-parens': ['error', 'all', { nestedBinaryExpressions: false }]
       }
     },
     {
