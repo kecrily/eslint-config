@@ -9,9 +9,7 @@ module.exports = {
   extends: ['standard'],
   rules: {
     // common
-    'semi': ['error', 'never'],
     'curly': ['error', 'multi-or-nest', 'consistent'],
-    'quotes': ['error', 'single'],
     'quote-props': ['error', 'consistent-as-needed'],
     'no-unused-vars': 'warn',
     'no-param-reassign': 'off',
@@ -25,11 +23,12 @@ module.exports = {
       'WithStatement'
     ],
     'no-return-await': 'off',
-    'space-before-function-paren': ['error', 'never'],
     'no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0, maxEOF: 0 }],
-    'indent': ['error', 2, { SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1 }],
 
     // style
+    'indent': ['error', 2, { SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1 }],
+    'semi': ['error', 'never'],
+    'quotes': ['error', 'single', { avoidEscape: true }],
     'array-bracket-spacing': ['error', 'never'],
     'arrow-spacing': ['error', { before: true, after: true }],
     'block-spacing': ['error', 'always'],
@@ -56,6 +55,7 @@ module.exports = {
     'object-shorthand': ['error', 'always', { avoidQuotes: true }],
     'operator-linebreak': ['error', 'before'],
     'prefer-template': 'error',
+    'space-before-function-paren': ['error', 'never'],
     'space-in-parens': ['error', 'never'],
     'space-infix-ops': ['error'],
     'space-unary-ops': ['error', { words: false, nonwords: false }],
