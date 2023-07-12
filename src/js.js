@@ -142,6 +142,7 @@ module.exports = {
     'unicorn/prefer-type-error': 'error',
     // Use new when throwing error
     'unicorn/throw-new-error': 'error',
+    'unicorn/prefer-node-protocol': 'error',
 
     'no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
     'import/no-named-as-default-member': 'off',
