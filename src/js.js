@@ -144,6 +144,7 @@ module.exports = {
     'unicorn/throw-new-error': 'error',
     'unicorn/prefer-node-protocol': 'error',
     'unicorn/prefer-array-find': ['error', { checkFromLast: true }],
+    'unicorn/prefer-set-has': 'error',
 
     'no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
     'import/no-named-as-default-member': 'off',
