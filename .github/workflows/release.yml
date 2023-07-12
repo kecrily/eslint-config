@@ -6,6 +6,7 @@ on:
 
 permissions:
   contents: write
+  id-token: write
 
 jobs:
   build:
@@ -32,7 +33,7 @@ jobs:
         run: pnpm install
 
       - name: Publish
-        run: pnpm publish --no-git-checks --provenance
+        run: pnpm publish --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       
