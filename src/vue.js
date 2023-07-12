@@ -42,7 +42,7 @@ module.exports = {
         'vue/keyword-spacing': ['error', { before: true, after: true }],
         'vue/no-constant-condition': 'error',
         'vue/no-empty-pattern': 'error',
-        'vue/no-extra-parens': ['error', 'all'],
+        'vue/no-extra-parens': ['error', 'all', { nestedBinaryExpressions: false, ternaryOperandBinaryExpressions: false }],
         'vue/no-irregular-whitespace': 'error',
         'vue/no-loss-of-precision': 'error',
         'vue/no-useless-concat': 'error',

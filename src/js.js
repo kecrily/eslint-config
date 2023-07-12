@@ -45,7 +45,7 @@ module.exports = {
     'keyword-spacing': ['error', { before: true, after: true }],
     'no-constant-condition': 'error',
     'no-empty-pattern': 'error',
-    'no-extra-parens': ['error', 'all', { nestedBinaryExpressions: false }],
+    'no-extra-parens': ['error', 'all', { nestedBinaryExpressions: false, ternaryOperandBinaryExpressions: false }],
     'no-irregular-whitespace': 'error',
     'no-loss-of-precision': 'error',
     'no-useless-concat': 'error',

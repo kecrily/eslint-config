@@ -72,7 +72,7 @@ module.exports = {
         'keyword-spacing': 'off',
         '@typescript-eslint/keyword-spacing': ['error', { before: true, after: true }],
         'no-extra-parens': 'off',
-        '@typescript-eslint/no-extra-parens': ['error', 'all', { nestedBinaryExpressions: false }],
+        '@typescript-eslint/no-extra-parens': ['error', 'all', { nestedBinaryExpressions: false, ternaryOperandBinaryExpressions: false }],
         'object-curly-spacing': 'off',
         '@typescript-eslint/object-curly-spacing': ['error', 'always'],
         'space-before-function-paren': 'off',
