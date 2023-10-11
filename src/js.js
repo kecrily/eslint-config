@@ -33,7 +33,7 @@ module.exports = {
     'arrow-spacing': ['error', { before: true, after: true }],
     'block-spacing': ['error', 'always'],
     'brace-style': ['error', '1tbs', { allowSingleLine: true }],
-    'camelcase': ['error', { properties: 'always' }],
+    'camelcase': ['error', { properties: 'never', ignoreDestructuring: true }],
     'comma-dangle': ['error', 'never'],
     'comma-spacing': ['error', { before: false, after: true }],
     'comma-style': ['error', 'last'],
