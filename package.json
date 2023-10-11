@@ -1,13 +1,14 @@
 {
   "name": "@kecrily/eslint-config",
-  "version": "0.2.7",
-  "description": "A ESLint config for Percy.",
+  "version": "0.2.8",
+  "description": "An ESLint config for Percy Ma.",
   "keywords": [
     "eslint",
     "eslint-config"
   ],
   "license": "MIT",
-  "author": "Percy Ma",
+  "author": "Percy Ma <kecrily@gmail.com>",
+  "repository": "github:kecrily/eslint-config",
   "packageManager": "pnpm@8.9.0",
   "main": "src/index.js",
   "files": [

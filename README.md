@@ -1,6 +1,6 @@
 # @kecrily/eslint-config
 
-> A ESLint config for Percy.
+> An ESLint config for Percy Ma.
 
 ## Use
 
