@@ -5,7 +5,10 @@ module.exports = {
       files: ['*.vue'],
       parser: 'vue-eslint-parser',
       parserOptions: {
-        parser: '@typescript-eslint/parser'
+        parser: {
+          js: 'espree',
+          ts: '@typescript-eslint/parser'
+        }
       },
       extends: ['plugin:vue/vue3-recommended', './ts'],
       rules: {
