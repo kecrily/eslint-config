@@ -32,6 +32,9 @@ jobs:
       - name: Install
         run: pnpm install
 
+      - name: Build
+        run: pnpm build
+
       - name: Publish
         run: pnpm publish --no-git-checks --provenance
         env:
