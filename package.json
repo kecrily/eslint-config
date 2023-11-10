@@ -1,5 +1,6 @@
 {
   "name": "@kecrily/eslint-config",
+  "type": "module",
   "version": "0.2.8",
   "description": "An ESLint config for Percy Ma.",
   "keywords": [
@@ -10,17 +11,29 @@
   "author": "Percy Ma <kecrily@gmail.com>",
   "repository": "github:kecrily/eslint-config",
   "packageManager": "pnpm@8.9.0",
-  "main": "src/index.js",
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
   "files": [
-    "src/*.js"
+    "dist"
   ],
   "scripts": {
+    "dev": "unbuild --stub",
+    "build": "unbuild",
     "lint": "eslint . --cache"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^6.7.5",
     "@typescript-eslint/parser": "^6.7.5",
+    "astro-eslint-parser": "^0.16.0",
+    "eslint-config-flat-gitignore": "^0.1.1",
     "eslint-config-standard": "17.1.0",
+    "eslint-define-config": "^1.24.1",
     "eslint-plugin-astro": "^0.29.1",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.28.1",
@@ -31,14 +44,15 @@
     "eslint-plugin-unicorn": "^48.0.1",
     "eslint-plugin-vue": "^9.17.0",
     "eslint-plugin-yml": "^1.10.0",
-    "jsonc-eslint-parser": "^2.3.0",
-    "typescript": "^5.2.2"
+    "globals": "^13.23.0",
+    "jsonc-eslint-parser": "^2.4.0",
+    "vue-eslint-parser": "^9.3.2",
+    "yaml-eslint-parser": "^1.2.2"
   },
   "devDependencies": {
     "@kecrily/eslint-config": "link:",
-    "eslint": "^8.51.0"
-  },
-  "eslintConfig": {
-    "extends": "@kecrily"
+    "eslint": "^8.51.0",
+    "typescript": "^5.2.2",
+    "unbuild": "^2.0.0"
   }
 }

@@ -1,4 +1,5 @@
 *.log
-logs
 .eslintcache
+dist
+logs
 node_modules

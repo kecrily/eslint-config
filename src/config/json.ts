@@ -1,0 +1,151 @@
+import { GLOB_JSONC, GLOB_JSONC5 } from '../globs'
+import { parserJsonc } from '../parsers'
+import { pluginJsonc } from '../plugins'
+import type { ConfigItem } from '../types'
+
+export const json: ConfigItem[] = [
+  {
+    files: [GLOB_JSONC5],
+    languageOptions: { parser: parserJsonc },
+    plugins: { jsonc: pluginJsonc },
+    rules: {
+      'strict': 'off',
+      'no-unused-expressions': 'off',
+      'no-unused-vars': 'off',
+
+      'jsonc/comma-dangle': 'error',
+      'jsonc/no-bigint-literals': 'error',
+      'jsonc/no-binary-expression': 'error',
+      'jsonc/no-binary-numeric-literals': 'error',
+      'jsonc/no-dupe-keys': 'error',
+      'jsonc/no-escape-sequence-in-identifier': 'error',
+      'jsonc/no-floating-decimal': 'error',
+      'jsonc/no-hexadecimal-numeric-literals': 'error',
+      'jsonc/no-infinity': 'error',
+      'jsonc/no-multi-str': 'error',
+      'jsonc/no-nan': 'error',
+      'jsonc/no-number-props': 'error',
+      'jsonc/no-numeric-separators': 'error',
+      'jsonc/no-octal-numeric-literals': 'error',
+      'jsonc/no-octal': 'error',
+      'jsonc/no-parenthesized': 'error',
+      'jsonc/no-plus-sign': 'error',
+      'jsonc/no-regexp-literals': 'error',
+      'jsonc/no-sparse-arrays': 'error',
+      'jsonc/no-template-literals': 'error',
+      'jsonc/no-undefined-value': 'error',
+      'jsonc/no-unicode-codepoint-escapes': 'error',
+      'jsonc/no-useless-escape': 'error',
+      'jsonc/quote-props': 'error',
+      'jsonc/quotes': 'error',
+      'jsonc/space-unary-ops': 'error',
+      'jsonc/valid-json-number': 'error',
+      'jsonc/vue-custom-block/no-parsing-error': 'error',
+      'jsonc/no-irregular-whitespace': 'error'
+    }
+  },
+  {
+    files: [GLOB_JSONC],
+    rules: {
+      'jsonc/no-bigint-literals': 'error',
+      'jsonc/no-binary-expression': 'error',
+      'jsonc/no-binary-numeric-literals': 'error',
+      'jsonc/no-dupe-keys': 'error',
+      'jsonc/no-escape-sequence-in-identifier': 'error',
+      'jsonc/no-floating-decimal': 'error',
+      'jsonc/no-hexadecimal-numeric-literals': 'error',
+      'jsonc/no-infinity': 'error',
+      'jsonc/no-multi-str': 'error',
+      'jsonc/no-nan': 'error',
+      'jsonc/no-number-props': 'error',
+      'jsonc/no-numeric-separators': 'error',
+      'jsonc/no-octal-numeric-literals': 'error',
+      'jsonc/no-octal': 'error',
+      'jsonc/no-parenthesized': 'error',
+      'jsonc/no-plus-sign': 'error',
+      'jsonc/no-regexp-literals': 'error',
+      'jsonc/no-sparse-arrays': 'error',
+      'jsonc/no-template-literals': 'error',
+      'jsonc/no-undefined-value': 'error',
+      'jsonc/no-unicode-codepoint-escapes': 'error',
+      'jsonc/no-useless-escape': 'error',
+      'jsonc/quote-props': 'error',
+      'jsonc/quotes': 'error',
+      'jsonc/space-unary-ops': 'error',
+      'jsonc/valid-json-number': 'error',
+      'jsonc/vue-custom-block/no-parsing-error': 'error'
+    }
+  },
+  {
+    files: ['*.json5'],
+    rules: {
+      'jsonc/no-bigint-literals': 'error',
+      'jsonc/no-binary-expression': 'error',
+      'jsonc/no-binary-numeric-literals': 'error',
+      'jsonc/no-dupe-keys': 'error',
+      'jsonc/no-escape-sequence-in-identifier': 'error',
+      'jsonc/no-number-props': 'error',
+      'jsonc/no-numeric-separators': 'error',
+      'jsonc/no-octal-numeric-literals': 'error',
+      'jsonc/no-octal': 'error',
+      'jsonc/no-parenthesized': 'error',
+      'jsonc/no-regexp-literals': 'error',
+      'jsonc/no-sparse-arrays': 'error',
+      'jsonc/no-template-literals': 'error',
+      'jsonc/no-undefined-value': 'error',
+      'jsonc/no-unicode-codepoint-escapes': 'error',
+      'jsonc/no-useless-escape': 'error',
+      'jsonc/space-unary-ops': 'error',
+      'jsonc/vue-custom-block/no-parsing-error': 'error'
+    }
+  },
+  {
+    files: ['package.json'],
+    rules: {
+      'jsonc/sort-keys': ['error', {
+        pathPattern: '^$',
+        order: [
+          'name', 'type', 'version', 'private',
+          'description', 'categories', 'keywords', 'license',
+          'author', 'contributors', 'repository',
+          'homepage', 'bugs', 'funding',
+          'engines', 'packageManager',
+          'main', 'module', 'browser', 'bin',
+          'types', 'typesVersions', 'unpkg', 'jsdelivr',
+          'exports', 'files',
+          'sideEffects', 'scripts',
+          'peerDependencies', 'peerDependenciesMeta',
+          'optionalDependencies', 'dependencies',
+          'devDependencies', 'bundledDependencies',
+          'pnpm', 'overrides', 'resolutions',
+          'husky', 'lint-staged', 'simple-git-hooks',
+          'config', 'eslintConfig', 'publishConfig', 'workspaces'
+        ]
+      },
+      {
+        pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies$',
+        order: { type: 'asc' }
+      },
+      {
+        pathPattern: '^exports.*$',
+        order: ['types', 'require', 'import']
+      },
+      {
+        pathPattern: '^scripts.*$',
+        order: [
+          { keyPattern: '^pre:.*$' },
+          { keyPattern: '^dev.*$' },
+          { keyPattern: '^build.*$' },
+          { keyPattern: '^generate.*$' },
+          { keyPattern: '^preview.*$' },
+          { keyPattern: '^test.*$' },
+          { keyPattern: '^typecheck.*$' },
+          { keyPattern: '^lint.*$' },
+          { keyPattern: '^release.*$' },
+          { keyPattern: '^post:.*$' }
+        ]
+      }
+      ]
+    }
+  }
+]
