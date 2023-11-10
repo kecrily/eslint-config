@@ -12,7 +12,7 @@ pnpm i eslint @kecrily/eslint-config typescript -D
 
 Create `eslint.config.js` file and add:
 
-```json
+```js
 export { default } from '@kecrily/eslint-config'
 ```
 
