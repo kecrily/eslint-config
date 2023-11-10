@@ -2,7 +2,7 @@
 
 > An ESLint config for Percy Ma.
 
-## Use
+## Usage
 
 Install eslint, config and typescript:
 
@@ -10,25 +10,11 @@ Install eslint, config and typescript:
 pnpm i eslint @kecrily/eslint-config typescript -D
 ```
 
-Add `eslintConfig` to `package.json`:
+Create `eslint.config.js` file and add:
 
 ```json
-{
-  // ...
-  "eslintConfig": {
-    "extends": "@kecrily"
-  }
-}
+export { default } from '@kecrily/eslint-config'
 ```
-
-## Check Also
-
-- [kecrily/create](https://github.com/kecrily/create)
-- [kecrily/dotfiles](https://github.com/kecrily/dotfiles)
-
-## Credit
-
-- [@antfu/eslint-config](https://github.com/antfu/eslint-config)
 
 ## License
 
