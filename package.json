@@ -10,7 +10,7 @@
   "license": "MIT",
   "author": "Percy Ma <kecrily@gmail.com>",
   "repository": "github:kecrily/eslint-config",
-  "packageManager": "pnpm@8.9.0",
+  "packageManager": "pnpm@8.10.5",
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -28,8 +28,8 @@
     "lint": "eslint . --cache"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.10.0",
-    "@typescript-eslint/parser": "^6.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
     "astro-eslint-parser": "^0.16.0",
     "eslint-config-flat-gitignore": "^0.1.1",
     "eslint-config-standard": "17.1.0",
@@ -51,6 +51,7 @@
   },
   "devDependencies": {
     "@kecrily/eslint-config": "link:",
+    "@stylistic/eslint-plugin": "^1.2.0",
     "eslint": "^8.53.0",
     "typescript": "^5.2.2",
     "unbuild": "^2.0.0"
