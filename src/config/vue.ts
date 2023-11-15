@@ -1,10 +1,12 @@
+import { extend } from '../utils'
 import { GLOB_VUE } from '../globs'
 import { parserTs, parserVue } from '../parsers'
-import { pluginTs, pluginVue } from '../plugins'
+import { pluginVue } from '../plugins'
 import type { ConfigItem } from '../types'
 import { ts } from './ts'
+import { js } from './js'
 
-export const vue: ConfigItem = {
+export const vue: ConfigItem = extend({
   files: [GLOB_VUE],
   languageOptions: {
     parser: parserVue,
@@ -14,9 +16,8 @@ export const vue: ConfigItem = {
       extraFileExtensions: ['.vue']
     }
   },
-  plugins: { vue: pluginVue, ts: pluginTs },
+  plugins: { vue: pluginVue },
   rules: {
-    ...ts[0].rules,
     'no-undef': 'off',
     'no-unused-vars': 'off',
     'ts/no-unused-vars': 'off',
@@ -172,4 +173,4 @@ export const vue: ConfigItem = {
     'vue/valid-v-slot': 'error',
     'vue/valid-v-text': 'error'
   }
-}
+}, [js[0], ts[0]])

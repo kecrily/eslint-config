@@ -1,10 +1,10 @@
-import { GLOB_JTSX, GLOB_JTSX_EXT, GLOB_JTSX_TEST, GLOB_VUE } from '../globs'
+import { GLOB_JTSX, GLOB_JTSX_EXT, GLOB_JTSX_TEST } from '../globs'
 import { pluginImport, pluginNode, pluginPromise, pluginUnicorn } from '../plugins'
 import type { ConfigItem } from '../types'
 
 export const js: ConfigItem[] = [
   {
-    files: [GLOB_JTSX, GLOB_VUE],
+    files: [GLOB_JTSX],
     plugins: {
       import: pluginImport,
       unicorn: pluginUnicorn,
