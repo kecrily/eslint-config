@@ -1,8 +1,8 @@
+import { style } from './style'
 import { GLOB_JTSX, GLOB_JTSX_EXT, GLOB_JTSX_TEST } from '../globs'
 import { pluginImport, pluginNode, pluginPromise, pluginUnicorn } from '../plugins'
-import type { ConfigItem } from '../types'
 import { extend } from '../utils'
-import { style } from './style'
+import type { ConfigItem } from '../types'
 
 export const js: ConfigItem[] = [
   extend({
@@ -169,7 +169,10 @@ export const js: ConfigItem[] = [
       'yoda': ['error', 'never'],
 
       // import
-      'import/order': 'error',
+      'import/order': ['error', {
+        groups: ['builtin', 'external', 'internal', 'index', 'sibling', 'parent', 'object', 'type'],
+        alphabetize: { order: 'asc', caseInsensitive: true }
+      }],
       'import/first': 'error',
       'import/no-mutable-exports': 'error',
 

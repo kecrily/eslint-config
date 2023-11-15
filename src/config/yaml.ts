@@ -1,6 +1,6 @@
 import { GLOB_YAML } from '../globs'
-import { pluginYaml } from '../plugins'
 import { parserYaml } from '../parsers'
+import { pluginYaml } from '../plugins'
 import type { ConfigItem } from '../types'
 
 export const yaml: ConfigItem = {

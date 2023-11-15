@@ -1,10 +1,10 @@
-import { extend } from '../utils'
+import { js } from './js'
+import { ts } from './ts'
 import { GLOB_VUE } from '../globs'
 import { parserTs, parserVue } from '../parsers'
 import { pluginVue } from '../plugins'
+import { extend } from '../utils'
 import type { ConfigItem } from '../types'
-import { ts } from './ts'
-import { js } from './js'
 
 export const vue: ConfigItem = extend({
   files: [GLOB_VUE],
