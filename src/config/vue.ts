@@ -2,6 +2,7 @@ import { GLOB_VUE } from '../globs'
 import { parserTs, parserVue } from '../parsers'
 import { pluginTs, pluginVue } from '../plugins'
 import type { ConfigItem } from '../types'
+import { ts } from './ts'
 
 export const vue: ConfigItem = {
   files: [GLOB_VUE],
@@ -9,14 +10,13 @@ export const vue: ConfigItem = {
     parser: parserVue,
     parserOptions: {
       parser: parserTs,
+      project: true,
       extraFileExtensions: ['.vue']
     }
   },
-  plugins: {
-    vue: pluginVue
-  },
+  plugins: { vue: pluginVue, ts: pluginTs },
   rules: {
-    ...pluginTs.configs['disable-type-checked'].rules,
+    ...ts[0].rules,
     'no-undef': 'off',
     'no-unused-vars': 'off',
     'ts/no-unused-vars': 'off',

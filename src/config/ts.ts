@@ -1,11 +1,11 @@
-import { GLOB_JTSX, GLOB_MARKDOWN, GLOB_TS, GLOB_TSX, GLOB_VUE } from '../globs'
+import { GLOB_JTSX, GLOB_MARKDOWN, GLOB_TS, GLOB_TSX } from '../globs'
 import { parserTs } from '../parsers'
 import { pluginTs } from '../plugins'
 import type { ConfigItem } from '../types'
 
 export const ts: ConfigItem[] = [
   {
-    files: [GLOB_TS, GLOB_TSX, GLOB_VUE],
+    files: [GLOB_TS, GLOB_TSX],
     languageOptions: {
       parser: parserTs,
       parserOptions: { project: true }
