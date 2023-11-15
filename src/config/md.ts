@@ -19,7 +19,7 @@ export const md: ConfigItem[] = [
       'no-console': 'off',
       'no-restricted-imports': 'off',
 
-      'eol-last': 'off',
+      'style/eol-last': 'off',
 
       'no-undef': 'off',
       'no-unused-expressions': 'off',

@@ -1,9 +1,11 @@
 import { GLOB_JTSX, GLOB_JTSX_EXT, GLOB_JTSX_TEST } from '../globs'
 import { pluginImport, pluginNode, pluginPromise, pluginUnicorn } from '../plugins'
 import type { ConfigItem } from '../types'
+import { extend } from '../utils'
+import { style } from './style'
 
 export const js: ConfigItem[] = [
-  {
+  extend({
     files: [GLOB_JTSX],
     plugins: {
       import: pluginImport,
@@ -14,7 +16,6 @@ export const js: ConfigItem[] = [
     rules: {
       // common
       'curly': ['error', 'multi-or-nest', 'consistent'],
-      'quote-props': ['error', 'consistent-as-needed'],
       'no-unused-vars': 'warn',
       'no-param-reassign': 'off',
       'no-debugger': 'error',
@@ -27,43 +28,18 @@ export const js: ConfigItem[] = [
         'WithStatement'
       ],
       'no-return-await': 'off',
-      'no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0, maxEOF: 0 }],
 
       // style
-      'indent': ['error', 2, { SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1 }],
-      'semi': ['error', 'never'],
-      'quotes': ['error', 'single', { avoidEscape: true }],
-      'array-bracket-spacing': ['error', 'never'],
-      'arrow-spacing': ['error', { before: true, after: true }],
-      'block-spacing': ['error', 'always'],
-      'brace-style': ['error', '1tbs', { allowSingleLine: true }],
       'camelcase': ['error', { properties: 'never', ignoreDestructuring: true }],
-      'comma-dangle': ['error', 'never'],
-      'comma-spacing': ['error', { before: false, after: true }],
-      'comma-style': ['error', 'last'],
-      'dot-location': ['error', 'property'],
       'dot-notation': ['error', { allowKeywords: true, allowPattern: '^[a-z]+(_[a-z]+)+$' }],
       'eqeqeq': ['error', 'smart'],
-      'func-call-spacing': ['error', 'never'],
-      'key-spacing': ['error', { beforeColon: false, afterColon: true }],
-      'keyword-spacing': ['error', { before: true, after: true }],
       'no-constant-condition': 'error',
       'no-empty-pattern': 'error',
-      'no-extra-parens': ['error', 'all', { nestedBinaryExpressions: false, ternaryOperandBinaryExpressions: false }],
       'no-irregular-whitespace': 'error',
       'no-loss-of-precision': 'error',
       'no-useless-concat': 'error',
-      'object-curly-newline': ['error', { consistent: true, multiline: true }],
-      'object-curly-spacing': ['error', 'always'],
-      'object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
       'object-shorthand': ['error', 'always', { avoidQuotes: true }],
-      'operator-linebreak': ['error', 'before'],
       'prefer-template': 'error',
-      'space-before-function-paren': ['error', 'never'],
-      'space-in-parens': ['error', 'never'],
-      'space-infix-ops': ['error'],
-      'space-unary-ops': ['error', { words: false, nonwords: false }],
-      'template-curly-spacing': ['error', 'never'],
 
       // es6
       'no-var': 'error',
@@ -78,19 +54,6 @@ export const js: ConfigItem[] = [
       'prefer-exponentiation-operator': 'error',
       'prefer-rest-params': 'error',
       'prefer-spread': 'error',
-      'arrow-parens': ['error', 'as-needed', { requireForBlockBody: true }],
-      'generator-star-spacing': 'off',
-      'spaced-comment': ['error', 'always', {
-        line: {
-          markers: ['/'],
-          exceptions: ['/', '#']
-        },
-        block: {
-          markers: ['!'],
-          exceptions: ['*'],
-          balanced: true
-        }
-      }],
 
       // best-practice
       'array-callback-return': 'error',
@@ -99,7 +62,6 @@ export const js: ConfigItem[] = [
       'complexity': ['off', 11],
       'no-alert': 'warn',
       'no-case-declarations': 'error',
-      'no-multi-spaces': 'error',
       'no-multi-str': 'error',
       'no-with': 'error',
       'no-void': 'error',
@@ -107,14 +69,6 @@ export const js: ConfigItem[] = [
       'vars-on-top': 'error',
       'require-await': 'off',
       'no-return-assign': 'off',
-      'no-mixed-operators': ['error', {
-        groups: [
-          ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
-          ['&&', '||', '?:'],
-          ['in', 'instanceof']
-        ],
-        allowSamePrecedence: true
-      }],
 
       'no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
       'import/no-named-as-default-member': 'off',
@@ -128,14 +82,10 @@ export const js: ConfigItem[] = [
       }],
 
       'accessor-pairs': ['error', { setWithoutGet: true, enforceForClassMembers: true }],
-      'computed-property-spacing': ['error', 'never', { enforceForClassMembers: true }],
       'constructor-super': 'error',
       'default-case-last': 'error',
-      'eol-last': 'error',
       'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
-      'multiline-ternary': ['error', 'always-multiline'],
       'new-cap': ['error', { newIsCap: true, capIsNew: false, properties: true }],
-      'new-parens': 'error',
       'no-array-constructor': 'error',
       'no-async-promise-executor': 'error',
       'no-caller': 'error',
@@ -157,7 +107,6 @@ export const js: ConfigItem[] = [
       'no-extra-bind': 'error',
       'no-extra-boolean-cast': 'error',
       'no-fallthrough': 'error',
-      'no-floating-decimal': 'error',
       'no-func-assign': 'error',
       'no-global-assign': 'error',
       'no-implied-eval': 'error',
@@ -169,7 +118,6 @@ export const js: ConfigItem[] = [
       'no-misleading-character-class': 'error',
       'no-prototype-builtins': 'error',
       'no-useless-catch': 'error',
-      'no-mixed-spaces-and-tabs': 'error',
       'no-new': 'error',
       'no-new-func': 'error',
       'no-new-object': 'error',
@@ -186,11 +134,9 @@ export const js: ConfigItem[] = [
       'no-sequences': 'error',
       'no-shadow-restricted-names': 'error',
       'no-sparse-arrays': 'error',
-      'no-tabs': 'error',
       'no-template-curly-in-string': 'error',
       'no-this-before-super': 'error',
       'no-throw-literal': 'error',
-      'no-trailing-spaces': 'error',
       'no-undef': 'error',
       'no-undef-init': 'error',
       'no-unexpected-multiline': 'error',
@@ -210,24 +156,16 @@ export const js: ConfigItem[] = [
       'no-useless-constructor': 'error',
       'no-useless-rename': 'error',
       'no-useless-return': 'error',
-      'no-whitespace-before-property': 'error',
       'one-var': ['error', { initialized: 'never' }],
-      'padded-blocks': ['error', { blocks: 'never', switches: 'never', classes: 'never' }],
       'prefer-promise-reject-errors': 'error',
       'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
-      'rest-spread-spacing': ['error', 'never'],
-      'semi-spacing': ['error', { before: false, after: true }],
-      'space-before-blocks': ['error', 'always'],
       'symbol-description': 'error',
-      'template-tag-spacing': ['error', 'never'],
       'unicode-bom': ['error', 'never'],
       'use-isnan': ['error', {
         enforceForSwitchCase: true,
         enforceForIndexOf: true
       }],
       'valid-typeof': ['error', { requireStringLiterals: true }],
-      'wrap-iife': ['error', 'any', { functionPrototypeMethods: true }],
-      'yield-star-spacing': ['error', 'both'],
       'yoda': ['error', 'never'],
 
       // import
@@ -278,7 +216,7 @@ export const js: ConfigItem[] = [
 
       'promise/param-names': 'error'
     }
-  },
+  }, style),
   {
     files: [`scripts/${GLOB_JTSX}`, `cli.${GLOB_JTSX_EXT}`],
     rules: { 'no-console': 'off' }
