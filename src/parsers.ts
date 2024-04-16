@@ -1,5 +1,5 @@
 export * as parserVue from 'vue-eslint-parser'
 export * as parserYaml from 'yaml-eslint-parser'
-export * as parserTs from '@typescript-eslint/parser'
-export { default as parserJsonc } from 'eslint-plugin-jsonc'
 export * as parserAstro from 'astro-eslint-parser'
+export { parser as parserTs } from 'typescript-eslint'
+export { default as parserJsonc } from 'eslint-plugin-jsonc'

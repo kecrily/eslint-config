@@ -35,8 +35,6 @@
   },
   "dependencies": {
     "@stylistic/eslint-plugin": "^1.2.0",
-    "@typescript-eslint/eslint-plugin": "^6.11.0",
-    "@typescript-eslint/parser": "^6.11.0",
     "astro-eslint-parser": "^0.16.0",
     "eslint-config-flat-gitignore": "^0.1.1",
     "eslint-config-standard": "17.1.0",
@@ -53,6 +51,7 @@
     "eslint-plugin-yml": "^1.10.0",
     "globals": "^13.23.0",
     "jsonc-eslint-parser": "^2.4.0",
+    "typescript-eslint": "^7.6.0",
     "vue-eslint-parser": "^9.3.2",
     "yaml-eslint-parser": "^1.2.2"
   },
