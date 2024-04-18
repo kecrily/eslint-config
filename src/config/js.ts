@@ -188,6 +188,8 @@ export const js: ConfigItem[] = [
       'node/no-new-require': 'error',
       'node/no-path-concat': 'error',
       'node/process-exit-as-throw': 'error',
+      'node/hashbang': 'error',
+      'node/no-unpublished-bin': 'error',
 
       // unicorns
       // Pass error message when throwing errors
