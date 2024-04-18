@@ -216,6 +216,10 @@ export const js: ConfigItem[] = [
       'unicorn/prefer-array-find': ['error', { checkFromLast: true }],
       'unicorn/prefer-set-has': 'error',
       'unicorn/prefer-export-from': 'error',
+      'unicorn/no-unnecessary-polyfills': 'error',
+      'unicorn/no-single-promise-in-promise-methods': 'error',
+      'unicorn/no-await-in-promise-methods': 'error',
+      'unicorn/no-anonymous-default-export': 'error',
 
       'promise/param-names': 'error'
     }
