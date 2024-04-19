@@ -1,7 +1,7 @@
 {
   "name": "@kecrily/eslint-config",
   "type": "module",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "An ESLint config for Percy Ma.",
   "keywords": [
     "eslint",
