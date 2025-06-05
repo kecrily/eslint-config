@@ -11,7 +11,7 @@
   "author": "Percy Ma <kecrily@gmail.com>",
   "repository": "github:kecrily/eslint-config",
   "engines": {
-    "node": "^18.18.0 || >=20.0.0"
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
   },
   "packageManager": "pnpm@9.0.4",
   "main": "./dist/index.mjs",
