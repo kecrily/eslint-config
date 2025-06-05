@@ -1,12 +1,12 @@
+import { defineConfig } from 'eslint/config'
 import { style } from './style'
 import { GLOB_JTSX, GLOB_JTSX_EXT, GLOB_JTSX_TEST } from '../globs'
 import { pluginImport, pluginNode, pluginPromise, pluginUnicorn } from '../plugins'
-import { extend } from '../utils'
-import type { ConfigItem } from '../types'
 
-export const js: ConfigItem[] = [
-  extend({
+export const js = defineConfig([
+  {
     files: [GLOB_JTSX],
+    extends: [style],
     plugins: {
       import: pluginImport,
       unicorn: pluginUnicorn,
@@ -225,7 +225,7 @@ export const js: ConfigItem[] = [
 
       'promise/param-names': 'error'
     }
-  }, style),
+  },
   {
     files: [`scripts/${GLOB_JTSX}`, `cli.${GLOB_JTSX_EXT}`],
     rules: { 'no-console': 'off' }
@@ -234,4 +234,4 @@ export const js: ConfigItem[] = [
     files: GLOB_JTSX_TEST,
     rules: { 'no-unused-expressions': 'off' }
   }
-]
+])

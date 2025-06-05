@@ -1,8 +1,8 @@
+import { defineConfig } from 'eslint/config'
 import { GLOB_MARKDOWN, GLOB_MARKDOWN_JTSX } from '../globs'
 import { pluginMarkdown } from '../plugins'
-import type { ConfigItem } from '../types'
 
-export const md: ConfigItem[] = [
+export const md = defineConfig([
   {
     files: [GLOB_MARKDOWN],
     plugins: { md: pluginMarkdown },
@@ -31,4 +31,4 @@ export const md: ConfigItem[] = [
       'unicode-bom': 'off'
     }
   }
-]
+])

@@ -1,9 +1,9 @@
+import { defineConfig } from 'eslint/config'
 import { GLOB_JSONC5 } from '../globs'
 import { parserJsonc } from '../parsers'
 import { pluginJsonc } from '../plugins'
-import type { ConfigItem } from '../types'
 
-export const json: ConfigItem[] = [
+export const json = defineConfig([
   {
     files: [GLOB_JSONC5],
     languageOptions: { parser: parserJsonc },
@@ -114,4 +114,4 @@ export const json: ConfigItem[] = [
       ]
     }
   }
-]
+])

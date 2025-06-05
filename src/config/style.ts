@@ -1,7 +1,7 @@
+import { defineConfig } from 'eslint/config'
 import { pluginStylistic } from '../plugins'
-import type { ConfigItem } from '../types'
 
-export const style: ConfigItem = {
+export const style = defineConfig({
   plugins: { style: pluginStylistic },
   rules: {
     'style/array-bracket-spacing': ['error', 'never'],
@@ -91,4 +91,4 @@ export const style: ConfigItem = {
     'style/member-delimiter-style': ['error', { multiline: { delimiter: 'none' } }],
     'style/type-annotation-spacing': ['error']
   }
-}
+})

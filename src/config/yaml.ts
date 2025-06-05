@@ -1,9 +1,9 @@
+import { defineConfig } from 'eslint/config'
 import { GLOB_YAML } from '../globs'
 import { parserYaml } from '../parsers'
 import { pluginYaml } from '../plugins'
-import type { ConfigItem } from '../types'
 
-export const yaml: ConfigItem = {
+export const yaml = defineConfig({
   files: [GLOB_YAML],
   languageOptions: { parser: parserYaml },
   plugins: { yaml: pluginYaml },
@@ -22,4 +22,4 @@ export const yaml: ConfigItem = {
 
     'yaml/quotes': ['error', { prefer: 'single', avoidEscape: false }]
   }
-}
+})

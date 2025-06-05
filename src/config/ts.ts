@@ -1,9 +1,9 @@
+import { defineConfig } from 'eslint/config'
 import { GLOB_JTSX, GLOB_MARKDOWN, GLOB_TS, GLOB_TSX } from '../globs'
 import { parserTs } from '../parsers'
 import { pluginTs } from '../plugins'
-import type { ConfigItem } from '../types'
 
-export const ts: ConfigItem[] = [
+export const ts = defineConfig([
   {
     files: [GLOB_TS, GLOB_TSX],
     languageOptions: {
@@ -96,4 +96,4 @@ export const ts: ConfigItem[] = [
       'ts/no-var-requires': 'off'
     }
   }
-]
+])

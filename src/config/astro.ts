@@ -1,10 +1,9 @@
+import { defineConfig } from 'eslint/config'
 import { GLOB_ASTRO } from '../globs'
 import { parserAstro, parserTs } from '../parsers'
 import { pluginAstro } from '../plugins'
 
-import type { ConfigItem } from '../types'
-
-export const astro: ConfigItem = {
+export const astro = defineConfig({
   files: [GLOB_ASTRO],
   languageOptions: {
     parser: parserAstro,
@@ -28,4 +27,4 @@ export const astro: ConfigItem = {
     'semi': 'off',
     'astro/semi': ['error', 'never']
   }
-}
+})
