@@ -7,10 +7,10 @@ export const ts = defineConfig([
   {
     files: [GLOB_TS, GLOB_TSX],
     languageOptions: {
-      parser: parserTs,
+      parser: parserTs as any,
       parserOptions: { project: true }
     },
-    plugins: { ts: pluginTs },
+    plugins: { ts: pluginTs as any },
     settings: {
       'import/extensions': GLOB_JTSX,
       'import/external-module-folders': ['node_modules', 'node_modules/@types'],

@@ -6,7 +6,7 @@ import { pluginYaml } from '../plugins'
 export const yaml = defineConfig({
   files: [GLOB_YAML],
   languageOptions: { parser: parserYaml },
-  plugins: { yaml: pluginYaml },
+  plugins: { yaml: pluginYaml as any },
   rules: {
     'no-irregular-whitespace': 'off',
     'no-unused-vars': 'off',

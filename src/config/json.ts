@@ -7,7 +7,7 @@ export const json = defineConfig([
   {
     files: [GLOB_JSONC5],
     languageOptions: { parser: parserJsonc },
-    plugins: { jsonc: pluginJsonc },
+    plugins: { jsonc: pluginJsonc as any },
     rules: {
       'strict': 'off',
       'no-unused-expressions': 'off',
