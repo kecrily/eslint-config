@@ -33,7 +33,7 @@ export const vue = defineConfig({
     'vue/no-setup-props-destructure': 'off',
 
     // style
-    'vue/component-tags-order': ['error', { order: ['script[setup]', 'script', 'template', 'style[scoped]', 'style'] }],
+    'vue/block-order': ['error', { order: ['script[setup]', 'script', 'template', 'style[scoped]', 'style'] }],
     'vue/array-bracket-spacing': ['error', 'never'],
     'vue/arrow-spacing': ['error', { before: true, after: true }],
     'vue/block-spacing': ['error', 'always'],
